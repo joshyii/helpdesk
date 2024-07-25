@@ -1,0 +1,115 @@
+.register_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(./register_background.png), lightgray 50% / cover no-repeat; ;
+    
+    .company-container {
+      width: 30%;
+      height: 70%; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0E1D3D;
+      padding: 6rem;
+      
+      .company {
+        text-align: center;
+        
+        .help {
+          font-size: 6rem;
+          padding: 3rem;
+          color: white;
+        }
+        
+        .desk {
+          font-size: 6rem;
+          padding: 3rem;
+          color: white;
+        }
+      }
+    }
+
+    .user_container {
+      width: 30%;
+      height: 70%; 
+      background-color: white;
+      padding: 6rem;
+      align-items: center;}
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+  * {
+      font-family: 'Montserrat', sans-serif;
+  }
+  
+  .form-group, .form-group-half {
+      margin-bottom: 15px; 
+  }
+  
+  .form-group-half {
+      float: left;
+      width: 48%; 
+  
+      &:nth-child(2n) {
+          margin-left: 4%; 
+      }
+  }
+  
+  .profile-details-form:after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+  
+  label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px; 
+      color: #333;
+  }
+  
+  input[type="text"] {
+      width: 95%;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.9em;
+  
+      &:focus {
+          border-color: #071228;
+          outline: none;
+      }
+  }
+  
+  .input-half[type="text"]{
+    width:90%;
+  }
+
+  button {
+      width: 120px; 
+      padding: 6px 12px; 
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #071228;
+      color: white;
+      font-weight: 600;
+      margin: 6px; 
+      border: none;
+  
+      &:hover {
+          background-color: lighten(#071228, 5%);
+      }
+  }
+  
+  .button-container {
+      text-align: center;
+      padding-top: 15px; 
+  }
+  
+  .help, .desk {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }

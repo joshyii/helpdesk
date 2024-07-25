@@ -1,0 +1,77 @@
+<div class="btn-back">
+    <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        <span class="btn-back-text">Back</span>
+    </button>
+</div>
+
+<div class="action-btn">
+    <button mat-button (click)="clickButton('agent-edit-article')" class="btn-edit"><span class="btn-text">Edit</span></button>
+    <button mat-button (click)="openSendReviewForm()" class="btn-review"><span class="btn-text">Send a review</span></button>
+</div>
+
+<div class="card">
+    <mat-card class="article-card">
+        <mat-card-header>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>This card indeterminates progress bar.</p>
+            <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+            from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+            originally bred for hunting.</p>
+            <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+                from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                originally bred for hunting.</p>
+        </mat-card-content>
+    </mat-card>
+    
+    <div class="subcard">
+        <mat-card class="content-card">
+            <mat-card-header>
+                <mat-card-subtitle>Article related to: <h2>Installation</h2></mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p class="content-index">Installing Github</p>
+                <p class="content-index">Installing Github</p>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="analytics-card">
+            <mat-card-header class="analytics-header">
+                <mat-card-title>ANALYTICS</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="analytics-content">
+                <mat-list-item class="view-item">
+                    <fa-icon [icon]="faEye"></fa-icon>
+                    <span>View</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>1</p>
+                </div>
+                <mat-list-item>
+                    <fa-icon [icon]="faThumbsUp"></fa-icon>
+                    <span>Helpful</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>155</p>
+                </div>
+                <mat-list-item>
+                    <fa-icon [icon]="faThumbsDown"></fa-icon>
+                    <span>Not Helpful</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>0</p>
+                </div>
+                <button mat-button (click)="clickButton('agent-article-feedback')" class="article-feedback-item">
+                    <fa-icon [icon]="faComments"></fa-icon>
+                    <span>Article Feedback</span>
+                </button>
+                <div class="article-feedback-result">
+                    <p>1155</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

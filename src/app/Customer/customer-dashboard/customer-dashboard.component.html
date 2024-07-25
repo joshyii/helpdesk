@@ -1,0 +1,121 @@
+<div class = "container">
+    <div class="top-section">
+    <h1 class="title">Dashboard</h1>
+
+    <div class="card">
+        <mat-card class="total-card">
+            <mat-card-header>
+                <mat-card-title>Total Tickets: 3</mat-card-title>
+            </mat-card-header>
+        </mat-card>
+    </div>
+
+    </div>
+
+    <div class="middle-section">
+
+        <table mat-table [dataSource]="dataSource">
+      
+            <!--Subject Column -->
+          <ng-container matColumnDef="subject">
+            <th mat-header-cell *matHeaderCellDef class="th-subject"> Subject </th>
+            <td mat-cell *matCellDef="let element" class="td-subject"> {{element.subject}} </td>
+          </ng-container>
+      
+          <!-- Desciption Column -->
+          <ng-container matColumnDef="description">
+            <th mat-header-cell *matHeaderCellDef class="th-description"> Description </th>
+            <td mat-cell *matCellDef="let element" class="td-description"> {{element.description}} </td>
+          </ng-container>
+      
+          <!-- Category Column -->
+          <ng-container matColumnDef="category">
+            <th mat-header-cell *matHeaderCellDef class="th-category"> Category </th>
+            <td mat-cell *matCellDef="let element" class="td-category"> {{element.category}} </td>
+          </ng-container>
+      
+          <!-- Priority Column -->
+          <ng-container matColumnDef="priority">
+            <th mat-header-cell *matHeaderCellDef class="th-priority">Priority </th>
+            <td mat-cell *matCellDef="let element" class="td-priority"> {{element.priority}} </td>
+          </ng-container>
+      
+          <!-- Status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef class="th-status"> Status </th>
+            <td mat-cell *matCellDef="let element" class="td-status"> {{element.status}} </td>
+          </ng-container>
+
+          <!-- Status Column -->
+          <ng-container matColumnDef="assigned_to">
+            <th mat-header-cell *matHeaderCellDef class="th-assigned_to"> Assigned To </th>
+            <td mat-cell *matCellDef="let element" class="td-assigned_to"> {{element.assigned_to}} </td>
+          </ng-container>
+
+          <!-- Published At Column -->
+          <ng-container matColumnDef="last_update">
+            <th mat-header-cell *matHeaderCellDef> Last Update </th>
+            <td mat-cell *matCellDef="let element"> {{element.last_update}} </td>
+          </ng-container>
+
+          <!-- Published At Column -->
+          <ng-container matColumnDef="date_submitted">
+            <th mat-header-cell *matHeaderCellDef> Date Submitted </th>
+            <td mat-cell *matCellDef="let element"> {{element.date_submitted}} </td>
+          </ng-container>
+
+          <ng-container matColumnDef="rating">
+            <th mat-header-cell *matHeaderCellDef> Average Rating </th>
+                <td mat-cell *matCellDef="let element">
+                        <app-star-rating [maxRating]="5" [currentRating]="element.rating"></app-star-rating>
+                </td>
+          </ng-container>
+      
+        
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                        showFirstLastButtons
+                        aria-label="Select page of periodic elements">
+        </mat-paginator>
+      
+    </div>
+
+    <div class="down-section">
+    <mat-card class="noti-card">
+      <mat-card-header>
+          <mat-card-title style="font-size:25px">Notification</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <div class="notification-container" *ngFor="let element of dataSource1.data">
+              <div class="below-title">{{element.noti_title}}</div>
+              <div class="below-content">{{element.noti_content}}</div>
+              <hr>
+          </div>
+      </mat-card-content>
+      
+    <div class="view"> view all </div>
+    </mat-card>
+
+    <mat-card class="article">
+    <mat-card-header>
+        <mat-card-title style="font-size:25px">Articles</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="article-container" *ngFor="let element of dataSource2.data">
+            <div class="below-title">{{element.art_title}}</div>
+            <div class="below-content">{{element.art_content}}</div>
+            <hr>
+        </div>
+    </mat-card-content>
+
+    <div class="view">
+    <a class="link" href="/customer-knowledge-base">View All</a>
+    </div>
+    </mat-card>
+    </div>
+</div>
+
+

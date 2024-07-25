@@ -1,0 +1,244 @@
+<h1 class="title">Dashboard</h1>
+
+<div class="top-section">
+    <div class="card1">
+        <mat-card class="agent-dash-card">
+            <mat-card-header>
+                <mat-card-title style="font-size: 16px">New Tickets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                321
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="card2">
+        <mat-card class="agent-dash-card">
+            <mat-card-header>
+                <mat-card-title style="font-size: 16px">Resolved Tickets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                70
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="card3">
+        <mat-card class="agent-dash-card">
+            <mat-card-header>
+                <mat-card-title style="font-size: 16px">Pending Tickets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                125
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <div class="card4">
+        <mat-card class="agent-dash-card">
+            <mat-card-header>
+                <mat-card-title style="font-size: 16px">Pending Tickets</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                155
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
+
+<div class="middle-section">
+
+    <div class="chart">
+        <mat-card class="chart-card">
+            <mat-card-header>
+                <mat-card-title class="chart-tite">Tickets Status</mat-card-title>
+            </mat-card-header>
+    
+          <div style="margin-left: 400px;">
+            <mat-form-field appearance="fill">
+                <mat-label>Select an option</mat-label>
+                <mat-select [(value)]="selected">
+    
+                  <mat-option value="option1">Daily</mat-option>  
+                  <mat-option value="option2">Monthly</mat-option>
+                  <mat-option value="option3">Yearly</mat-option>
+                </mat-select>
+              </mat-form-field>
+          
+          
+          </div>
+    
+    
+        <div>    
+          <app-agent-day-chart *ngIf="selected==='option1'"></app-agent-day-chart> 
+        </div>
+    
+        <div>
+          <app-agent-month-chart *ngIf="selected==='option2'"></app-agent-month-chart>
+        </div>
+    
+        <div>
+          <app-agent-year-chart *ngIf="selected==='option3'"></app-agent-year-chart>
+        </div>
+    
+      </mat-card>
+    </div>
+
+    <mat-card class="performance">
+        <mat-card-header>
+            <mat-card-title style="font-size: 20px">Performance</mat-card-title>
+        </mat-card-header>
+        <div>
+            <div class="average-respone">
+                <div class="head">Average Respone Time</div>
+                <div class="body">00:05:45</div>
+            </div>
+            <div class="average-resolution">
+                <div class="head">Average Resolution Time</div>
+                <div class="body">00:15:40</div>
+            </div>
+
+            <div class="head2">Rating</div>
+        
+            <div class="rating">
+                <ng-container matColumnDef="rating">
+                    <app-agent-star-rating [maxRating]="5" [currentRating]=3></app-agent-star-rating>
+                </ng-container>
+            </div>
+        </div>
+
+    </mat-card>
+    
+    
+</div>
+
+<div class="bottom-section">
+
+    <div class="choice">
+    
+        <mat-tab-group>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    Agent Performance
+                </ng-template>
+                
+                <table mat-table [dataSource]="dataSource">
+      
+                    <!-- Position Column -->
+                   <ng-container matColumnDef="position">
+                     <th mat-header-cell *matHeaderCellDef> Agent </th>
+                     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                   </ng-container>
+             
+                   <!-- Name Column -->
+                   <ng-container matColumnDef="name">
+                     <th mat-header-cell *matHeaderCellDef> Average Response Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                   </ng-container>
+             
+                   <!-- Weight Column -->
+                   <ng-container matColumnDef="weight">
+                     <th mat-header-cell *matHeaderCellDef> Resolution Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                   </ng-container>
+             
+                   <!-- Symbol Column -->
+                  <ng-container matColumnDef="rating">
+                     <th mat-header-cell *matHeaderCellDef> Average Rating </th>
+                        <td mat-cell *matCellDef="let element">
+                            <app-star-rating [maxRating]="5" [currentRating]="element.rating"></app-star-rating>
+                        </td>
+                   </ng-container>
+            
+                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                 </table>
+               
+            </mat-tab>
+          
+            <mat-tab>
+             
+                <ng-template mat-tab-label>
+                    Recent Tenants
+                </ng-template>
+                <table mat-table [dataSource]="dataSource">
+      
+                    <!-- Position Column -->
+                   <ng-container matColumnDef="position">
+                     <th mat-header-cell *matHeaderCellDef> Agent </th>
+                     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                   </ng-container>
+             
+                   <!-- Name Column -->
+                   <ng-container matColumnDef="name">
+                     <th mat-header-cell *matHeaderCellDef> Average Response Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                   </ng-container>
+             
+                   <!-- Weight Column -->
+                   <ng-container matColumnDef="weight">
+                     <th mat-header-cell *matHeaderCellDef> Resolution Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                   </ng-container>
+             
+                   <!-- Symbol Column -->
+                  <ng-container matColumnDef="rating">
+                     <th mat-header-cell *matHeaderCellDef> Average Rating </th>
+                      <td mat-cell *matCellDef="let element">
+                            <app-star-rating [maxRating]="5" [currentRating]="element.rating"></app-star-rating>
+                      </td>
+                  </ng-container>
+            
+                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                 </table>
+    
+            </mat-tab>
+          
+            <mat-tab>
+           
+                <ng-template mat-tab-label>
+                    Recent Articles
+                </ng-template>
+    
+                <table mat-table [dataSource]="dataSource">
+      
+                    <!-- Position Column -->
+                   <ng-container matColumnDef="position">
+                     <th mat-header-cell *matHeaderCellDef> Agent </th>
+                     <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                   </ng-container>
+             
+                   <!-- Name Column -->
+                   <ng-container matColumnDef="name">
+                     <th mat-header-cell *matHeaderCellDef> Average Response Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                   </ng-container>
+             
+                   <!-- Weight Column -->
+                   <ng-container matColumnDef="weight">
+                     <th mat-header-cell *matHeaderCellDef> Resolution Time </th>
+                     <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                   </ng-container>
+             
+                   <!-- Symbol Column -->
+                  <ng-container matColumnDef="rating">
+                     <th mat-header-cell *matHeaderCellDef> Average Rating </th>
+                        <td mat-cell *matCellDef="let element">
+                            <app-star-rating [maxRating]="5" [currentRating]="element.rating"></app-star-rating>
+                        </td>
+                   </ng-container>
+            
+                   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                 </table>
+          
+        
+            </mat-tab>
+          </mat-tab-group>
+        <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                       showFirstLastButtons
+                       aria-label="Select page of periodic elements">
+        </mat-paginator>
+    </div>
+</div>

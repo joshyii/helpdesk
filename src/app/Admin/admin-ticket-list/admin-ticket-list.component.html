@@ -1,0 +1,51 @@
+<div id="main">
+    <table id="top-panel">
+        <tr>
+            <td style="width:20%;"><h1 class="header">Tickets</h1></td>
+            <td style="width:60%;"><input id = "search" type="text" name="search" placeholder="Search..."></td>
+            <td style="width:20%;"><div id ="total-tickets">Total Tickets: {{ticket.length}}</div></td>
+        </tr>
+        <td>
+            <button id = "filterBtn">Add Filter</button>
+        </td>
+    </table>
+
+    
+    <table id = "ticket-listing">
+        <tr id = "ticket-listing-header">
+            <th style = "width: 10%;">Subject</th>
+            <th style = "width: 15%;">Description</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Customer</th>
+            <th>Agent</th>
+            <th>Submitted on</th>
+            <th>Rating</th>
+        </tr>
+        <!--call from database-->
+        <tr *ngFor="let tickets of ticket">
+            <<td><a [routerLink]="['/admin-ticket', tickets.id]">{{ tickets.title }}</a></td>
+            <td>{{ tickets.description }}</td>
+            <td>{{ tickets.category }}</td>
+            <td>
+            <div [ngClass]="{
+              'prioritybox-high': tickets.priority === 'High',
+              'prioritybox-medium': tickets.priority === 'Medium',
+              'prioritybox-low': tickets.priority === 'Low'
+            }">{{ tickets.priority }} </div>
+            </td>
+            <td>
+              <div [ngClass]="{
+                'statusbox-unassigned': tickets.status === 'Unassigned',
+                'statusbox-assigned': tickets.status === 'Assigned',
+                'statusbox-resolved': tickets.status === 'Resolved'
+              }">{{ tickets.status }}</div>
+            </td>
+            <td>{{tickets.customer_name}}</td>
+            <td>{{ tickets.agent_name}}</td>
+            <td>{{ tickets.submit_date }}</td>
+            <td>{{tickets.rating}}</td>
+          </tr>
+ 
+    </table>

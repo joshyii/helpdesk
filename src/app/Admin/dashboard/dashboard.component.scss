@@ -1,0 +1,92 @@
+.title{
+    margin: 33px 0px 6px 37px;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.top-section{
+    margin: 33px 0px 6px 37px;
+}
+
+.card{
+    
+    width: 300px;
+    height: auto;
+}
+
+.mat-card-content{
+    margin: 10px 0px 6px 37px;
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.card2{
+    
+    width: 300px;
+    height: auto;
+    margin-left: 350px;
+    margin-top: -94px;
+}
+
+.card3{
+
+    width: 300px;
+    height: auto;
+    margin-left: 700px;
+    margin-top: -94px;
+}
+
+.chart {
+    margin: 33px 0px 6px 37px;
+    width:1000px;
+    height:650px;
+    flex: 1;
+}
+
+.dropbox{
+    margin-right:600px;
+}
+
+.choice{
+    margin: 33px 0px 6px 37px;
+    width: 1000px;
+    height: auto;
+}
+
+:host{
+
+    ::ng-deep{
+
+        .mat-tab-label .mat-tab-label-content  {
+
+            color: rgb(0, 0, 0);
+            font-weight: 1000;
+            font-size:20px;
+        }
+
+    }
+
+}
+
+table.mat-table {
+    border-spacing: 0 15px;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+tr.mat-header-row {
+    background-color: #658598;
+    color: #fff;
+}
+
+th.mat-header-cell{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+td {
+    text-align: center;
+    background-color: #fff;
+}
+

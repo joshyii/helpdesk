@@ -1,0 +1,70 @@
+.article-card {
+    width: 66%;
+    margin: 31px 10px 0px 20px;
+}
+
+.card{
+    display: flex;
+    padding: 20px;
+    height: auto;
+}
+
+.subcard{
+    // display: grid;
+    padding: 20px 20px 0px 20px;
+    width: 30%;
+    height: auto;
+}
+
+.content-card {
+    width: 90%;
+    margin: 10px 0px 0px 0px;
+    float: right;
+}
+
+span{
+    padding-left: 10px;
+}
+
+.btn-back{
+    margin: 24px 0px 0px 23px;
+}
+
+.btn-back-text{
+    padding-left: 2px;
+}
+
+.mat-mdc-card-content:last-child {
+    padding-top: 10px;
+}
+
+h2{
+    color: #000;
+    margin: -5px 0px 0px 7px;
+    font-size: 16px;
+}
+
+mat-card-subtitle{
+    display: flex;
+}
+
+.action-btn{
+    position: absolute;
+    top: 56px;
+    right: 40px;
+}
+
+.btn-feedback{
+    background-color: #071228;
+    padding: 0px 35px;
+    
+}
+
+.btn-text{
+    color: white;
+    padding: 0px;
+}
+
+.content-index{
+    padding-left: 10px;
+}

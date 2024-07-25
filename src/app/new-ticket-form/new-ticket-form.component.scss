@@ -1,0 +1,148 @@
+form{
+    padding: 40px 40px;
+    margin: 0px;
+    width: 90%;
+    height: 90%;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 40px;
+  padding-top: 4%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  margin: auto;
+}
+
+h5{
+  font-family: "Montserrat";
+  display: flex;
+  color: #000;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+
+#ticket-header{
+  padding-left: 0px;
+}
+
+
+#main {
+  background-color: #F2F3F5;
+  margin:0px;
+  outline: none;
+  border: 0px;
+  overflow: hidden;
+  padding: 5%;
+  height: 100%;
+  margin-bottom: 75px;
+  
+}
+
+input[type="text"], textarea {
+    width: 95%;
+    border-radius: 5px;
+    height: 46px;
+    border: none;
+    background: #EEE;
+    font-weight: normal;
+}
+
+textarea {
+  width: 95%;
+  border-radius: 5px;
+  height: 144px;
+  border: none;
+  background: #EEE;
+  font-weight: normal;
+}
+
+select {
+    border-radius: 5px;
+    border: 1px solid #A8A8A8;
+    background: #EEE;
+    width: 200px;
+    height: 30px;
+    flex-shrink: 0;
+    font-weight: normal;
+    font-family: 'montserrat'
+}
+
+button{
+  position: absolute;
+  left: 40%;
+  width: 196.15px;
+  height: 48.232px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#FFF;
+  border-radius: 8px;
+  background: #071228;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.08);
+}
+
+.button:hover {
+    background-color: #0d1c3a;
+    color: #fff;
+  }
+
+  button:disabled{
+    background-color: #BDBDBD;
+    color: #fff;
+    cursor: not-allowed;
+  }
+
+  #attach-container{
+    border-radius: 5px;
+    border: 1px dashed #BDBDBD;
+    background: #EEE;
+    width: 95%;
+    height: 94px;
+    flex-shrink: 0;
+  }
+  
+  #organization-container{
+    width: 1289px;
+    height: 144px;
+    flex-shrink: 0;
+  }
+
+  .attachment{
+    font-weight: normal;
+    border-radius: 8px;
+    background: #EEE;
+  }
+
+* {
+  color: #000;
+  font-family: "Montserrat";
+  font-size: 15px;
+  font-style: normal;
+  line-height: normal; 
+  font-weight: bold;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#form{
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+a {
+  font-weight: 300;
+}

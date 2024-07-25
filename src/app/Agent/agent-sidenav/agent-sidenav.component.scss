@@ -1,0 +1,73 @@
+.list-item-active{
+    background: #4f7587;
+}
+
+span{
+    color: white;
+    padding-left: 23px;
+    white-space: pre-wrap;
+    display: inline-block;
+}
+
+.dashboard-span{
+    padding-top: 10px;
+    padding-left: 19px;
+    
+}
+
+.ticket-span{
+    padding-left: 16px;
+}
+
+mat-nav-list{
+    position: absolute;
+    top: 5%;
+
+}
+
+fa-icon{
+    color: white;
+}
+
+mat-icon{
+    color: white;
+    float: left;
+    width: 16px;
+    font-size: 20px;
+    padding-top: 4px;
+}
+
+.mdc-list-item {
+    padding-left: 25px;
+    padding-right: 37px;
+    
+}
+
+.footer a{
+    display: block;
+    text-align: center;
+    color: white;
+    padding-bottom: 9px;
+    text-decoration: none;
+}
+.footer{
+    margin-top: 284px;
+    margin-left: 74px;
+}
+
+.mat-divider {
+    border-top-width: 240px;
+}
+.mat-nav-list .mat-list-item {
+    width: 141%;
+}
+
+:host{
+    ::ng-deep{
+        .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus{
+            background: #4f7587;
+            width: 141%;
+        }
+    }
+}
+

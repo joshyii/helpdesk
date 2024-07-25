@@ -1,0 +1,128 @@
+.container {
+    width: 100%;
+}
+
+.top-section{
+    margin: 33px 0px 6px 37px;
+}
+
+.middle-section{
+    margin: 33px 0px 6px 37px;
+    width:1050px;
+}
+
+.down-section{
+    margin: 33px 0px 6px 37px;
+}
+
+.title{
+   
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+.card{
+    width: 200px;
+    height: auto;
+    margin-left: 850px;
+    margin-top: -50px;
+    
+}
+
+.mat-card-title{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+tr.mat-header-row {
+    background-color: #658598;
+    color: #fff;
+}
+
+th.mat-header-cell{
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+table.mat-table {
+    border-spacing: 0 15px;
+    background-color: #f0f1f3;
+    width: 100%;
+}
+
+td {
+    text-align: center;
+    background-color: #fff;
+    padding: 0px 5px;
+}
+
+mat-paginator{
+    background-color: #f0f1f3;  
+}
+
+.td-title{
+    text-align: left;
+    width: 34%;
+}
+
+.td-category{
+    text-align: left;
+    width: 10%;
+}
+
+td.mat-cell{
+    padding: 12px 10px;
+}
+
+th.mat-header-cell.th-title{
+    text-align: left;
+}
+
+th.mat-header-cell.th-category{
+    text-align: left;
+    padding-left: 10px;
+}
+
+td.mat-cell.td-title{
+    padding-left: 24px;
+}
+
+.noti-card{
+    
+    width:450px;
+    height: 400px;
+}
+
+.notification-container{
+    margin: 33px 0px 6px 37px;
+    
+}
+
+.below-title{
+
+    font-weight: bolder;
+    
+}
+
+.below-content{
+    color: #9c9c9c;
+}
+
+.view{
+    color: #9c9c9c;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.article{
+    margin-left: 570px ;
+    margin-top: -431px;
+    width:450px;
+    height: 400px;
+}
+
+.article-container{
+    margin: 33px 0px 6px 37px;
+    
+}

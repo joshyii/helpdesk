@@ -1,0 +1,62 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:wght@300&display=swap" rel="stylesheet">
+
+<div id="main">
+    <a routerLink = "/admin-ticket-list">&lt; back</a><br>
+    <div id = "title_priority_request">
+        <h2>{{ticket.title}}</h2>
+        <div [ngClass]="{
+            'prioritybox-high': ticket.priority === 'High',
+            'prioritybox-medium': ticket.priority === 'Medium',
+            'prioritybox-low': ticket.priority === 'Low'
+          }">{{ ticket.priority }} </div>
+      
+    </div>
+    <div id="details">
+        <table>
+            <tr>
+                <td>Submitted on: </td>
+                <td>{{ticket.submit_date.toDate() | date: 'MMM dd, yyyy hh:mm'}}</td>
+                <td>Status: </td>
+                <td style="text-transform: capitalize">{{ticket.status}}</td>
+            </tr>
+            <tr>
+                <!-- shown on admin page only -->
+                <td>Assigned to: </td>
+                <td>
+                    {{ticket.agent_name}}
+                </td>
+            </tr>
+            <tr>
+                <td>Category: </td>
+                <td>{{ticket.category}}</td>
+            </tr>
+        </table>
+        
+    </div>
+    <div id="threads">
+        <!-- call from database -->
+        <app-thread *ngFor = "let message of messages" 
+        send_date="{{ message.send_date | date: 'MMM dd, yyyy hh:mm' }}"
+        sender_name="{{message.sender_name}}"
+        text="{{message.text}}"
+        ></app-thread>        
+    </div>
+</div>
+
+<!-- if ticket is resolved-->
+<app-ticket-right-resolved *ngIf = "ticket.status === 'resolved'" ticket_id="{{this.ticket_id}}"></app-ticket-right-resolved>
+
+<!-- if ticket is assigned or ongoing -->
+<app-ticket-right-assigned *ngIf = "ticket.status === 'assigned'" ticket_id="{{this.ticket_id}}"></app-ticket-right-assigned>
+
+
+
+
+
+
+
+
+
+

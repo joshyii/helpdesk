@@ -1,0 +1,46 @@
+.title{
+    margin: 26px 0px 37px 37px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.feedback-header, .feedback-content{
+    display: flex;
+    font-size: 14px;
+}
+
+.feedback-header{
+    margin-bottom: 10px;
+}
+
+.btn-back{
+    margin: 24px 0px 0px 23px;
+}
+
+.btn-back-text{
+    padding-left: 2px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+mat-card{
+    width: 93%;
+    padding: 19px 16px 9px 16px;
+}
+
+.username{
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.date{
+    font-size: 12px;
+}
+
+fa-icon{
+    margin: 7px 15px 0px 5px;
+    font-size: 25px;
+}

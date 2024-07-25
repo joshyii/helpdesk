@@ -1,0 +1,47 @@
+<div class="btn-back">
+    <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        <span class="btn-back-text">Back</span>
+    </button>
+</div>
+
+<h1 class="title">New Article</h1>
+<span class="subtitle">Remember to add all the necessary details before publishing</span>
+
+<mat-card>
+    <form>
+        <div class="form-title">
+            <mat-form-field>
+                <label>Title</label><br>
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div class="form2">
+            <mat-form-field class="form2-form-field-category">
+                <label>Category</label><br>
+                <mat-select>
+                    <mat-option value="one">First option</mat-option>
+                    <mat-option value="two">Second option</mat-option>
+                </mat-select>     
+            </mat-form-field>
+            <mat-form-field class="form2-form-field">
+                <label>Version</label><br>
+                <input matInput>
+            </mat-form-field>
+        </div>
+
+        <div class="form-content">
+            <mat-form-field>
+                <label>Content</label><br>
+                <textarea matInput rows="15"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="action-btn">
+            <button mat-button class="btn-cancel">Cancel</button>
+            <button type="submit" class="btn-publish"><span class="btn-text">Publish</span></button>
+        </div>
+        
+    </form>    
+</mat-card>

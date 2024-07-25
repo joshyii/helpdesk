@@ -1,0 +1,38 @@
+<mat-nav-list>  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="admin-dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span class="customer-dashboard-span">Dashboard</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="admin-ticket-list">
+        <fa-icon [icon]="faTicketAlt"></fa-icon>
+        <span class="ticket-span">Tickets</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="user-list">
+        <fa-icon [icon]="faUser"></fa-icon>
+        <span>User</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="admin-notification">
+        <fa-icon [icon]="faBell"></fa-icon>
+        <span>Notification</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="knowledge-base">
+        <fa-icon [icon]="faLightbulb"></fa-icon>
+        <span>Knowledge Base</span>
+    </a>
+
+    <mat-expansion-panel class="mat-elevation-z0">
+        <mat-expansion-panel-header>
+            <fa-icon [icon]="faFileAlt"></fa-icon>
+            <span>Article</span>
+        </mat-expansion-panel-header>
+        <mat-nav-list class="submenu">
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="all-article-list"><span>All Article</span></a>
+            <a mat-list-item routerLinkActive="list-item-active" routerLink="pending-approval-article-list"><span class="long-text">Pending Approval List</span></a>
+        </mat-nav-list>
+    </mat-expansion-panel>
+
+    <div class="footer">
+        <a routerLink="">Setting</a>
+        <a (click)="logout()">Logout</a>
+    </div>
+</mat-nav-list>

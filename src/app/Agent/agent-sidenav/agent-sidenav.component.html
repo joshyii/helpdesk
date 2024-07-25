@@ -1,0 +1,27 @@
+<mat-nav-list>  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="agent-dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span class="agent-dashboard-span">Dashboard</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="agent-ticket-list">
+        <fa-icon [icon]="faTicketAlt"></fa-icon>
+        <span class="ticket-span">Tickets</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="agent-notification">
+        <fa-icon [icon]="faBell"></fa-icon>
+        <span>Notification</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="agent-knowledge-base">
+        <fa-icon [icon]="faLightbulb"></fa-icon>
+        <span>Knowledge Base</span>
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="agent-profile">
+        <fa-icon [icon]="faUser"></fa-icon>
+        <span>Profile</span>
+    </a>
+
+    <div class="footer">
+        <a routerLink="">Setting</a>
+        <a (click)="logout()">Logout</a>
+    </div>
+</mat-nav-list>

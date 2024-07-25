@@ -1,0 +1,122 @@
+<div id="main">
+    <table id="top-panel">
+        <tr>
+            <td style="width:20%;"><h1 class="header">Tickets</h1></td>
+            <td style="width:60%;"><input id = "search" type="text" name="search" placeholder="Search..."></td>
+            <td style="width:20%;"><div id ="total-tickets">Total Tickets:{{totalTicket}}</div></td>
+        </tr>
+        <td>
+            <div class="filter-box">
+                <button class="filter-option" [attr.data-active]="activeFilter === 'inbox'" (click)="setFilter('inbox')">Inbox</button>
+                <button class="filter-option" [attr.data-active]="activeFilter === 'assigned'" (click)="setFilter('assigned')">Assigned</button>
+                <button class="filter-option" [attr.data-active]="activeFilter === 'resolved'" (click)="setFilter('resolved')">Resolved</button>
+              </div>
+        </td>
+        <td>              
+            <button id = "filterBtn">Add Filter</button>
+        </td>
+    </table>
+
+    <!-- inbox ticket -->
+    <table id="ticket-listing" *ngIf="activeFilter === 'inbox'">
+        <tr id = "ticket-listing-header">
+            <th style = "width: 10%;">Subject</th>
+            <th style = "width: 15%;">Description</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Organization</th>
+            <th>Customer</th>
+            <th>Submitted on</th>
+            <th>Action</th>
+        </tr>
+
+        <!--call from database-->
+        <tr *ngFor="let tickets of unassignedTicket">
+            <td><a [routerLink]="['/agent-ticket', tickets.id, this.loggedInUser]">{{ tickets.title }}</a></td>
+            <td>{{ tickets.description }}</td>
+            <td>{{ tickets.category }}</td>
+            <td>
+            <div [ngClass]="{
+              'prioritybox-high': tickets.priority === 'High',
+              'prioritybox-medium': tickets.priority === 'Medium',
+              'prioritybox-low': tickets.priority === 'Low'
+            }">{{ tickets.priority }} </div>
+            </td>
+            <td>{{ tickets.vendor }}</td>
+            <td>{{tickets.customer_name}}</td>
+            <td>{{ tickets.submit_date }}</td>
+            <td><button id="acceptButton" (click)="acceptTicket(tickets.id, this.loggedInUser)">Accept</button></td>
+        </tr>
+ 
+    </table>
+
+      <!-- assigned ticket -->
+      <table id="ticket-listing" *ngIf="activeFilter === 'assigned'">
+        <tr id = "ticket-listing-header">
+            <th style = "width: 10%;">Subject</th>
+            <th style = "width: 15%;">Description</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Organization</th>
+            <th>Customer</th>
+            <th>Submitted on</th>
+            <th>Action</th>
+        </tr>
+
+        <!--call from database-->
+        <ng-container *ngFor="let tickets of agentTicket">
+        <tr *ngIf="tickets.status === 'Assigned'">
+            <td><a [routerLink]="['/agent-ticket', tickets.id, this.loggedInUser]">{{ tickets.title }}</a></td>
+            <td>{{ tickets.description }}</td>
+            <td>{{ tickets.category }}</td>
+            <td>
+            <div [ngClass]="{
+              'prioritybox-high': tickets.priority === 'High',
+              'prioritybox-medium': tickets.priority === 'Medium',
+              'prioritybox-low': tickets.priority === 'Low'
+            }">{{ tickets.priority }} </div>
+            </td>
+            <td>{{tickets.vendor}}</td>
+            <td>{{ tickets.customer_name }}</td>
+            <td>{{ tickets.submit_date }}</td>
+            <td><button id="acceptButton" (click)="requestReassignment(tickets.id)">Reqeust <Br> Reassignment</button></td>
+          </tr>
+        </ng-container>
+    </table>
+
+
+    <!-- resolved ticket -->
+    <table id="ticket-listing" *ngIf="activeFilter === 'Resolved'">
+        <tr id = "ticket-listing-header">
+            <th style = "width: 10%;">Subject</th>
+            <th style = "width: 15%;">Description</th>
+            <th>Category</th>
+            <th>Priority</th>
+            <th>Organization</th>
+            <th>Customer</th>
+            <th>Date Submitted</th>
+            <th>Rating</th>
+        </tr>
+
+        <!--call from database-->
+        <ng-container *ngFor="let tickets of agentTicket">
+            <tr *ngIf="tickets.status === 'resolved'">
+              <td><a [routerLink]="['/agent-ticket', tickets.id, this.loggedInUser]">{{ tickets.title }}</a></td>
+              <td>{{ tickets.description }}</td>
+              <td>{{ tickets.category }}</td>
+              <td>
+                <div [ngClass]="{
+                  'prioritybox-high': tickets.priority === 'High',
+                  'prioritybox-medium': tickets.priority === 'Medium',
+                  'prioritybox-low': tickets.priority === 'Low'
+                }">{{ tickets.priority }} </div>
+              </td>
+              <td>{{ tickets.vendor }}</td>
+              <td>{{ tickets.customer_name }}</td>
+              <td>{{ tickets.submit_date }}</td>
+              <td>{{tickets.rating}}</td>
+            </tr>
+          </ng-container>
+          
+ 
+    </table>

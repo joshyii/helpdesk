@@ -1,0 +1,42 @@
+#main {
+    width: 15%;
+    position: fixed;
+    right:0;
+    top:0;
+    bottom:0;
+    height: 100%;
+    padding:35px 0;
+    overflow: scroll;
+    background-color: white;
+    
+}
+h2{
+    margin: 30px 35px 20px 35px;
+}
+button {
+    position: absolute;
+    right: 15%;
+    bottom: 30%;
+    font-size: 15px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    line-height: normal;
+    background-color: white;
+    border:none;
+
+}
+p{
+    margin: 0 35px;
+    text-align: justify;
+    font-family: "Montserrat";
+}
+textarea{
+    margin: 0 35px;
+    text-align: justify;
+    font-family: "Montserrat";
+    border: none;
+    outline:none;
+    width: 70%;
+    height: 45%;
+    overflow: scroll;
+}

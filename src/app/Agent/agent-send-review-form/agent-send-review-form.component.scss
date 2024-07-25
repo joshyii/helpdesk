@@ -1,0 +1,34 @@
+.btn-send{
+    background-color: #071228;
+    // width: 46%;
+    padding: 0px 32px;
+    border-radius: 4px;
+}
+
+.btn-text{
+    color: white;
+}
+
+.mat-dialog-title {
+    display: flex;
+}
+
+fa-icon{
+    margin-right: 14px;
+}
+
+.dialog-title{
+    font-weight: 500;
+}
+
+.mat-dialog-actions {
+    float: right;
+}
+
+:host{
+    ::ng-deep{
+        .mat-form-field-infix {
+            width: 600px;
+        }
+    }
+}

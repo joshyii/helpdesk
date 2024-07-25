@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-3bc28": {
+      "hosting": {
+        "angular_v16": [
+          "test-3bc28"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-3bc28"
+  }
+}

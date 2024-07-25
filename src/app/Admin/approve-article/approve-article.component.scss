@@ -1,0 +1,137 @@
+.article-card {
+    width: 66%;
+    margin: 31px 10px 0px 20px;
+}
+
+.card{
+    display: flex;
+    padding: 20px;
+    height: auto;
+}
+
+.subcard{
+    // display: grid;
+    padding: 20px 20px 0px 20px;
+    width: 30%;
+    height: auto;
+}
+
+.properties-card{
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    float: right;
+    padding: 0px;
+}
+
+.properties-header{
+    background-color: #e6e7ea;
+    padding: 17px 0px 4px 20px;
+}
+
+.properties-content{
+    padding: 12px 16px 16px 16px;
+}
+
+.properties-subtitle{
+    font-size: inherit;
+    font-weight: 600;
+}
+
+.btn-card{
+    width: 100%;
+    margin: 27px 0px 0px 0px;
+    float: right;
+    background-color: #f0f1f3;
+    box-shadow: none;
+    padding: 0px;
+}
+
+mat-list-item{
+    padding: 8px;
+    display: flex;
+     //    width: 90%;
+}
+
+span{
+    padding-left: 10px;
+}
+
+.view-item{
+    margin-left: -2px;
+}
+
+.action-btn{
+    display: contents;
+}
+
+.btn-reject{
+    background-color: #D74242;
+    margin-top: 14px;
+    width: 100%;
+}
+
+.btn-approve{
+    background-color: #4F7587;
+    width: 100%;
+    
+}
+
+.btn-text{
+    color: white;
+    padding: 0px;
+}
+
+.category{
+    width: 96%;
+    padding-bottom: 0px;
+}
+
+mat-form-field{
+    padding: 11px 0px 0px 10px;
+    width: 96%;
+}
+
+.form-field-category{
+    padding: 0px 0px 0px 10px;
+    width: 96%;
+}
+
+.properties-subcontent{
+    display: block;
+    padding-top: 4px;
+}
+
+.properties-subcontent-status{
+    display: block;
+    background-color: #d9f1dc;
+    color: #4ac05c;
+    border-radius: 5px;
+    width: 100%;
+    padding: 8px 5px;
+    text-align: center;
+    margin: 9px 0px 0px 10px;
+}
+
+.properties-list-item{
+    padding-bottom: 3px;
+}
+
+:host{
+    ::ng-deep{
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+            background-color: whitesmoke;
+        }
+    }
+}
+
+.btn-back{
+    margin: 24px 0px 0px 23px;
+}
+
+.btn-back-text{
+    padding-left: 2px;
+}
+
+mat-select{
+    padding: 5px 0px;
+}

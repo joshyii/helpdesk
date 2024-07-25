@@ -1,0 +1,29 @@
+<div class="profile-container">
+    <img src="{{picture}}" alt="Profile Picture" class="profile-image">
+    
+    <h1 class="profile-name">{{firstName}} {{lastName}}</h1>
+    
+    <p class="profile-username">@{{username}}</p>
+    
+    <div class="profile-detail">
+        <span class="detail-title">Email:</span>
+        <span class="detail-content">{{email}}</span>
+    </div>
+    
+    <div class="profile-detail">
+        <span class="detail-title">Phone:</span>
+        <span class="detail-content">{{contactNumber}}</span>
+    </div>
+    
+    <div class="profile-detail">
+        <span class="detail-title">Address:</span>
+        <span class="detail-content">{{address}}</span>
+    </div>
+</div>
+
+<div>
+<button routerLink="/customer-edit-password">Edit Password</button>
+<button routerLink="/customer-edit-profile">Edit Profile</button>
+</div>
+
+

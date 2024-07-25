@@ -1,0 +1,64 @@
+.btn-submit{
+    background-color: #071228;
+    // width: 46%;
+    padding: 0px 32px;
+    border-radius: 4px;
+}
+
+.btn-text{
+    color: white;
+}
+
+.mat-dialog-title {
+    display: flex;
+    margin: 0 0 8px;
+}
+
+fa-icon{
+    margin-right: 14px;
+}
+
+.dialog-title{
+    font-weight: 500;
+}
+
+.mat-dialog-actions {
+    float: right;
+}
+
+textarea.mat-input-element {
+    padding: 2px 0px;
+    margin-top: 10px;
+}
+
+.btn-yes{
+    border: 1px solid #c9c9d0;
+    padding: 0px 20px;
+    margin-right: 25px;
+}
+
+.btn-no{
+    border: 1px solid #c9c9d0;
+    padding: 0px 20px;
+}
+
+.action-btn{
+    margin-bottom: 25px;
+}
+
+span{
+    font-weight: 400;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+:host{
+    ::ng-deep{
+        .mat-form-field-infix {
+            width: 450px;
+        }
+    }
+}

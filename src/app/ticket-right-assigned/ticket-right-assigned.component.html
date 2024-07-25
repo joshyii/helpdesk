@@ -1,0 +1,10 @@
+<div id="main">
+    <h2>Problem Notes</h2>
+    <ng-container *ngIf="!editing; else editMode">
+        <p (click)="startEditing()">{{ problemNotes }}</p>
+    </ng-container>
+    <ng-template #editMode>
+        <textarea id= "note" [(ngModel)]="editedProblemNote"></textarea>
+        <button (click)="saveChanges()">Done</button>
+    </ng-template>
+</div>

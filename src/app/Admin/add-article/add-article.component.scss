@@ -1,0 +1,122 @@
+td {
+    padding-right: 8px;
+}
+
+mat-card{
+    width: 89%;
+    margin: 25px 0px 20px 41px;
+    height: 100%;
+}
+
+.btn-publish{
+    background-color: #071228;
+    // width: 46%;
+    padding: 8px 34px;
+    border-radius: 4px;
+    font-family: var(--mdc-typography-button-font-family, var(--mdc-typography-font-family, Roboto, sans-serif));
+    font-size: var(--mdc-typography-button-font-size, 14px);
+    font-weight: var(--mdc-typography-button-font-weight, 500);
+    //letter-spacing: var(--mdc-typography-button-letter-spacing, 0.0892857143em);
+}
+
+.btn-back{
+    margin: 24px 0px 0px 23px;
+}
+
+.btn-back-text{
+    padding-left: 2px;
+}
+
+.btn-cancel{
+    margin-right: 20px;
+    // width: 41%;
+    padding: 1px 38px;
+}
+
+.btn-text{
+    color: white;
+}
+
+.action-btn{
+    float: right;
+    display: flex;
+    margin-right: 35px;
+}
+
+.subtitle{
+    margin-left: 37px;
+}
+
+.title{
+    margin: 26px 0px 6px 37px;
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.form-title{
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+.form2{
+    margin-left: 35px;
+}
+
+.form-content{
+    margin: 0px 0px 10px 35px;  
+}
+
+input{
+    padding: 10px;
+    font-size: 17px;
+    margin-top: 9px;
+    width: 97%;
+}
+
+textarea{
+    padding: 10px;
+    font-size: 17px;
+    margin-top: 9px;
+    width: 97%;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+mat-form-field{
+    width: 96%;
+}
+
+.form2-form-field-category{
+    width: 40%;
+    margin-right: 80px;
+}
+
+.form2-form-field{
+    width: 30%;
+}
+
+:host{
+    ::ng-deep{
+        .mat-mdc-form-field-infix {
+            width: 96%;
+        }
+    }
+}
+
+textarea.mat-input-element {
+    padding: 2px 13px;
+    margin: 15px 0px 0px 0px;
+}
+
+mat-select{
+    margin-top: 12px;
+    font-size: 15px;
+    padding: 10px 0px 10px 8px;
+}
+
+.mat-form-field-infix {
+    width: 100%;
+}

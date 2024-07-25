@@ -1,0 +1,108 @@
+.title-container {
+    text-align: center; /* Center the title horizontally */
+    margin-top: 20px; /* Add space between the title and the content above */
+    margin-bottom: 20px; /* Add space between the title and the content below */
+}
+  
+.knowledge-title {
+    font-size: 32px; /* Adjust the font size as needed */
+    margin: 71px 0px 18px 0px; 
+    font-weight: bold; /* Make the title bold */
+}
+
+.search-bar{
+    border: none;
+    border-radius: 5px;
+    margin: 30px 0px 0px 0px;
+    position: relative;
+}
+
+.search-bar input{
+    border: none;
+    width: 60%;
+    line-height: 22px;
+    padding: 12px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 12px #e4e4e4;
+    text-align: left;
+    font-size: 15px;
+    text-indent: 40px;
+    outline: none;
+}
+
+.search-icon{
+    position: absolute;
+    margin: 14px 0px 0px 12px;
+    color: #4f7587;
+}
+
+/* category.component.css */
+.mat-expansion-panel {
+    margin-bottom: 16px; /* Add space between each expansion panel */
+    text-align: left; /* Center the content of each expansion panel */
+    margin-top: 20px; /* Add space between the title and the content above */
+    margin-bottom: 20px; /* Add space between the title and the content below */
+}
+  
+/* category.component.css */
+.subcard {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+}
+  
+.mat-accordion {
+    width: 80%; /* Adjust the width of the accordion as needed */
+    max-width: 80%; /* Set a maximum width to prevent excessive stretching */
+    margin-top: 50px;
+}
+  
+.add-icon {
+    position: fixed;
+    bottom: 37px; /* Adjust the distance from the bottom */
+    right: 50px; /* Adjust the distance from the right */
+    width: 40px; /* Adjust the width of the icon container */
+    height: 40px; /* Adjust the height of the icon container */
+    background-color: #bae8e8; /* Adjust the background color of the icon container */
+    border-radius: 50%; /* Create a round border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.add-icon i {
+    color: #708796; 
+    font-size: 24px; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link {
+    text-decoration: none;
+    font-size: 15px;
+    color:#0070E0;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
+
+.mat-expansion-panel-header-title{
+    font-weight: bold;
+}
+
+.mat-expansion-panel-header.mat-expanded {
+    height: 60px;
+}
+
+:host{
+    ::ng-deep{
+        .mat-expansion-indicator::after {
+            color: #000;
+            margin-top: -5px;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<div mat-dialog-title>
+    <h1 class="dialog-title">Send a Review</h1>
+  </div>
+  
+  <div mat-dialog-content class="dialog-container">
+    <div class="rating-container">
+        <div
+        class="rating-button"
+        [ngClass]="{'active': selectedRatings === 1}"
+        (click)="selectRating(1)"
+    >
+        1
+    </div>
+    
+        <div
+        class="rating-button"
+        [ngClass]="{'active': selectedRatings === 2}"
+        (click)="selectRating(2)"
+    >
+        2
+    </div>
+
+    <div
+        class="rating-button"
+        [ngClass]="{'active': selectedRatings === 3}"
+        (click)="selectRating(3)"
+    >
+        3
+    </div>
+
+    <div
+        class="rating-button"
+        [ngClass]="{'active': selectedRatings === 4}"
+        (click)="selectRating(4)"
+    >
+        4
+    </div>
+
+    <div
+        class="rating-button"
+        [ngClass]="{'active': selectedRatings === 5}"
+        (click)="selectRating(5)"
+    >
+        5
+    </div>
+
+    </div>
+
+    <mat-form-field>
+        <mat-label>Feedback</mat-label>
+        <textarea matInput [(ngModel)]="feedback"></textarea>
+      </mat-form-field>
+    </div>
+    
+    <div mat-dialog-actions>
+      <button mat-button (click)="closeDialog()">Cancel</button>
+      <button mat-button>Send</button>
+    </div>

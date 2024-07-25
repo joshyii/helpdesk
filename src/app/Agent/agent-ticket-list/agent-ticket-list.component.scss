@@ -1,0 +1,193 @@
+main {
+    align-items: center;
+    justify-content: center;
+}
+#top-panel {
+    width: 90%;
+    margin:auto;
+    margin-top: 5%;
+
+}
+h1 {
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    margin: auto;
+}
+#search {
+    width: 90%;
+    margin: auto;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background: #FFF;
+    box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.08);
+    text-indent: 10px;
+}
+#total-tickets{
+    text-align: center;
+    padding: 15px;
+    line-height: normal;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 25px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.08);
+    margin: 2% 0;
+}
+#ticket-listing {
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    width: 95%;
+    color: #FFF;
+    margin: auto;
+    padding: 25px;
+    border-radius:8px;
+    table-layout: fixed;
+}
+
+
+#ticket-listing-header {
+    height: 50px;
+    text-align: center;
+    line-height: normal;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 8px 15px -1px rgba(0, 0, 0, 0.08);
+}
+
+th {
+    background-color: #658598;
+    font-size: 15px;
+    font-family: Montserrat;
+    font-weight: 400;
+    padding: 0 15px;
+    width: auto;
+}
+
+td:first-child, th:first-child{
+    text-align: left;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+
+td:last-child, th:last-child {
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+#ticket-listing td {
+    background-color: white;
+    color:black;
+    height: 30px;
+    padding: 15px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: auto;
+}
+#ticket-listing td:nth-child(2), #ticket-listing th:nth-child(2) {
+    text-align: left;
+}
+
+.prioritybox-high,.prioritybox-medium,.prioritybox-low{
+  width: 100%;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.prioritybox-high{
+  background-color: #FD7474;
+}
+
+.prioritybox-medium{
+  background-color: #FDEB74;
+}
+
+.prioritybox-low{
+  background-color: #46ECB0;
+}
+
+
+
+#filterBtn{
+    position: absolute;
+    right: 5%;
+    width: 150px;
+    height: 37px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid #E4E4E4;
+    background: #FFF;
+    color: #787575;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.filter-box {
+    position: absolute;
+    left: 5%;
+    width: 450px; // Adjusted width to fit all 3 buttons
+    height: 37px;
+    display: flex; 
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #E4E4E4;
+  
+    .filter-option {
+      flex: 1; // Makes each button take up an equal amount of space
+      height: 100%;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      font-family: Montserrat;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400; // default weight
+      line-height: normal;
+      color: #787575;
+      text-align: center;
+      border-radius: 3px; 
+      transition: font-weight 0.3s ease;
+  
+      // Removes margin from the first and last buttons
+      &:first-child {
+        margin-left: 0;
+      }
+  
+      &:last-child {
+        margin-right: 0;
+      }
+  
+      // Boldens the text when active instead of hover
+      &:active,
+      &[data-active="true"] {
+        font-weight: 700; // bold weight
+        color:black;
+      }
+    }
+  }
+
+  #acceptButton {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color for Accept */
+    color: #fff;
+    border: 1px solid #28a745; /* Border color matches the background */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  
+    &:hover {
+      background-color: #1e7e34; /* Darker green on hover */
+      color: #fff;
+    }
+  }

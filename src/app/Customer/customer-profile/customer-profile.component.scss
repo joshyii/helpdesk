@@ -1,0 +1,96 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5F5;
+}
+
+.profile-container {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(7, 18, 40, 0.5); 
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 7px 25px rgba(7, 18, 40, 0.5); 
+    }
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #071228;
+    margin-bottom: 25px;
+    object-fit: cover;
+    transition: transform 0.2s;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.profile-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #071228;
+    margin-bottom: 10px;
+}
+
+.profile-username {
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #071228;
+    padding: 5px 15px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+}
+
+.profile-detail {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 20px;
+    transition: background-color 0.2s;
+    
+    &:hover {
+        background-color: #F5F5F5;
+    }
+}
+
+.detail-title {
+    font-weight: 600;
+    color: #555;
+}
+
+.detail-content {
+    color: #071228;
+}
+
+button {
+    width: 150px; 
+    padding: 8px 16px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    background-color: #071228; 
+    color: white;
+    font-weight: 600; 
+    font-size: 0.9em; 
+    margin: 8px;
+    border: none; 
+    &:hover {
+        background-color: lighten(#071228, 5%);
+    }
+  }
+
+  div {
+    margin: 15px auto; 
+    text-align: center; 
+    width: 75%; 
+}

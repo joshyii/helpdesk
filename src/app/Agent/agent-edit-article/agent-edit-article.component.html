@@ -1,0 +1,103 @@
+<div class="btn-back">
+    <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon>
+        <span class="btn-back-text">Back</span>
+    </button>
+</div>
+
+<div class="action-btn">
+    <button mat-button class="btn-confirm"><span class="btn-text">Confirm</span></button>
+</div>
+
+<div class="card">
+    <mat-card class="article-card">
+        <mat-card-header>
+            <mat-card-title>Shiba Inu</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>This card indeterminates progress bar.</p>
+            <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+            from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+            originally bred for hunting.</p>
+            <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+                from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                originally bred for hunting.</p>
+                <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
+                    from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                    originally bred for hunting.</p>
+        </mat-card-content>
+    </mat-card>
+    
+    <div class="subcard">
+        <mat-card class="properties-card">
+            <mat-card-header class="properties-header">
+                <mat-card-title>ARTICLE PROPERTIES</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="properties-content">
+                <mat-list-item class="view-item">
+                    <span class="properties-subtitle">Status</span>
+                    <span class="properties-subcontent-status">Published</span>
+                </mat-list-item>
+                <hr>
+
+                <!-- p1 -->
+                <mat-list-item class="category">
+                    <span class="properties-subtitle">Category</span><br>
+                    <mat-form-field class="form-field-category">
+                        <mat-select>
+                          <mat-option value="one">First option</mat-option>
+                          <mat-option value="two">Second option</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-list-item>
+                <hr>
+                <mat-list-item class="properties-list-item">
+                    <span class="properties-subtitle">Created On</span>
+                    <span class="properties-subcontent">5-7-2023</span>
+                </mat-list-item>
+                <hr>
+                <mat-list-item class="properties-list-item">
+                    <span class="properties-subtitle">Version</span>
+                    <span class="properties-subcontent">V10.1</span>
+                </mat-list-item>
+            </mat-card-content>
+        </mat-card>
+
+        <mat-card class="analytics-card">
+            <mat-card-header class="analytics-header">
+                <mat-card-title>ANALYTICS</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="analytics-content">
+                <mat-list-item class="view-item">
+                    <fa-icon [icon]="faEye"></fa-icon>
+                    <span>View</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>1</p>
+                </div>
+                <mat-list-item>
+                    <fa-icon [icon]="faThumbsUp"></fa-icon>
+                    <span>Helpful</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>155</p>
+                </div>
+                <mat-list-item>
+                    <fa-icon [icon]="faThumbsDown"></fa-icon>
+                    <span>Not Helpful</span>
+                </mat-list-item>
+                <div class="result">
+                    <p>0</p>
+                </div>
+                <button mat-button (click)="clickButton('agent-article-feedback')" class="article-feedback-item">
+                    <fa-icon [icon]="faComments"></fa-icon>
+                    <span>Article Feedback</span>
+                </button>
+                <div class="article-feedback-result">
+                    <p>1155</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

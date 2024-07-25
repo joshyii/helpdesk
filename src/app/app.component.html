@@ -1,0 +1,32 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:wght@300&display=swap" rel="stylesheet">
+<mat-drawer-container>
+
+  <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="userService.isLoggedIn()">
+    <ng-container *ngIf=" sharedService.getselectedRole() === 'Agent'">
+      <app-agent-sidenav></app-agent-sidenav>
+    </ng-container>
+    <ng-container *ngIf="sharedService.getselectedRole() === 'User'">
+      <app-customer-sidenav></app-customer-sidenav>
+    </ng-container>
+    <ng-container *ngIf="sharedService.getselectedRole() === 'Admin'">
+      <app-sidenav></app-sidenav>
+    </ng-container>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+
+</mat-drawer-container>
+
+<!-- <h2>Test</h2>
+<h3 *ngFor="let singleArticle of article">
+  <b>* {{singleArticle.article_category}}</b>
+  <b>* {{singleArticle.article_context}}</b>
+  <b>* {{singleArticle.article_id}}</b>
+  <b>* {{singleArticle.published_date}}</b>
+  <b>* {{singleArticle.title}}</b>
+</h3>
+ -->
